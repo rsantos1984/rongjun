@@ -1,0 +1,2417 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+
+body {
+    background: #111;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* TOPO */
+
+.topo {
+
+    width: 100%;
+    height: 260px;
+
+    background-image: url("img/topo-bg.png");
+
+    background-size: cover;
+    background-position: top;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: auto;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* ESCURECER FUNDO */
+
+.overlay {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.00);
+}
+
+
+/* ÁREA DA LOGO */
+
+.logo-area {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* LOGO */
+
+.logo-area img {
+
+    width: 370px;
+
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
+}
+
+/* RESPONSIVO CELULAR */
+
+/* ===================================== */
+/* FAIXA 9 MOBILE */
+/* ===================================== */
+
+.cards-garantia {
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.card-garantia {
+
+    width: 100%;
+
+    max-width: 340px;
+
+    padding: 18px;
+}
+
+.card-garantia h3 {
+
+    font-size: 18px;
+}
+
+.card-garantia p {
+
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+    /* ===================================== */
+    /* AVISO MOBILE */
+    /* ===================================== */
+
+    .aviso-seriedade {
+
+        font-size: 22px !important;
+
+        margin-top: 28px;
+
+        line-height: 1.7;
+
+        padding: 15px;
+    }
+
+    /* ===================================== */
+    /* WHATSAPP MOBILE */
+    /* ===================================== */
+
+    .whatsapp-flutuante {
+
+        width: 58px;
+
+        height: 58px;
+
+        right: 15px;
+
+        bottom: 15px;
+
+        font-size: 32px;
+
+        .icone-whatsapp {
+
+            width: 30px;
+
+            height: 30px;
+        }
+    }
+
+    /* ===================================== */
+    /* COPYRIGHT MOBILE */
+    /* ===================================== */
+
+    .faixa14 {
+
+        padding: 18px 15px;
+    }
+
+
+
+    .texto-copy {
+
+        font-size: 12px;
+    }
+
+    /* ===================================== */
+    /* FAQ MOBILE */
+    /* ===================================== */
+
+    .faixa13 {
+
+        padding: 35px 15px;
+    }
+
+
+
+    .titulo-faq {
+
+        font-size: 20px;
+
+        margin-bottom: 25px;
+    }
+
+
+
+    .faq-pergunta span:first-child {
+
+        font-size: 13px;
+    }
+
+
+
+    .faq-resposta p {
+
+        font-size: 11px;
+
+        line-height: 1.7;
+    }
+
+    /* ===================================== */
+    /* FAIXA 12 MOBILE */
+    /* ===================================== */
+
+    .bloco-valor {
+
+        align-items: center;
+    }
+
+    .faixa12 {
+
+        padding: 25px 15px;
+    }
+
+    .card-preco-faixa12 {
+
+        padding: 22px 20px;
+
+        border-width: 4px;
+
+        overflow: visible;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .preco-faixa12 {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 12px 5px;
+
+        margin: 0 auto 10px;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+    }
+
+
+
+    .subtitulo-faixa12 {
+
+        font-size: 18px;
+
+        margin-bottom: 35px;
+    }
+
+
+
+    .cifrao {
+
+        font-size: 18px;
+
+        margin-top: 6px;
+    }
+
+
+
+    .valor {
+
+        font-size: 42px;
+
+        line-height: 0.9;
+    }
+
+
+
+    .botao-faixa12 {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: 82px;
+
+        font-size: 22px;
+
+        display: inline-flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        box-sizing: border-box;
+
+        margin: 0 auto 22px auto;
+    }
+
+
+
+    .texto-seguro {
+
+        font-size: 15px;
+    }
+
+    /* ===================================== */
+    /* AJUSTES MOBILE FORÇADOS */
+    /* ===================================== */
+
+    .preco-faixa12 {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 10px 5px;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+
+
+    .cifrao {
+
+        font-size: 16px !important;
+
+        margin-top: 4px;
+    }
+
+
+
+    .valor {
+
+        font-size: 92px !important;
+
+        line-height: 1;
+    }
+
+
+
+    .mensais {
+
+        font-size: 22px !important;
+    }
+
+
+
+    .botao-faixa12 {
+
+        width: 90%;
+
+        max-width: 90%;
+
+        height: 82px;
+
+        font-size: 22px;
+
+        display: block;
+
+        text-align: center;
+
+        box-sizing: border-box;
+
+        margin: 0 auto 22px auto;
+    }
+
+    /* ===================================== */
+    /* FAIXA 8 MOBILE */
+    /* ===================================== */
+
+    .faixa8 {
+
+        padding: 40px 15px;
+    }
+
+    .titulo-faixa8 {
+
+        font-size: 26px;
+
+        margin-bottom: 30px;
+
+        line-height: 1.25;
+    }
+
+
+
+    .faixa8-botao {
+
+        width: 100%;
+
+        max-width: 320px;
+
+        height: 80px;
+
+        font-size: 24px;
+    }
+
+    /* ===================================== */
+    /* FAIXA 7 MOBILE */
+    /* ===================================== */
+
+    .faixa7 {
+
+        width: 100%;
+
+        padding: 20px 12px 25px;
+
+        overflow: hidden;
+    }
+
+
+
+    /* TÍTULO */
+
+    .titulo-faixa7 {
+
+        font-size: 32px !important;
+
+        line-height: 1.15;
+
+        text-align: center;
+
+        margin-bottom: 15px !important;
+
+        max-width: 340px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+
+    /* CONTAINER */
+
+    .conteudo-faixa7 {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        gap: 0;
+
+        padding: 0;
+
+        margin: 0;
+    }
+
+
+
+    /* IMAGEM */
+
+    .imagem-professor {
+
+        width: 88vw !important;
+
+        max-width: 420px;
+
+        height: auto !important;
+
+        aspect-ratio: 1250 / 1926;
+
+        margin: 0 auto 0px;
+
+        border-radius: 210px 210px 0 0;
+
+        overflow: hidden;
+    }
+
+
+
+    /* FOTO */
+
+    .imagem-professor img {
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+
+        object-position: top;
+
+        display: block;
+    }
+
+
+
+    /* TEXTO */
+
+    .texto-professor {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        padding: 0 !important;
+
+        margin: -50px auto 0;
+
+        text-align: center;
+    }
+
+
+
+    /* NOME */
+
+    .texto-professor h3 {
+
+        font-size: 24px !important;
+
+        margin-bottom: 8px !important;
+
+        line-height: 1.2;
+    }
+
+
+
+    /* PARÁGRAFOS */
+
+    .texto-professor p {
+
+        width: 100%;
+
+        font-size: 21px !important;
+
+        line-height: 1.5 !important;
+
+        margin-bottom: 8px !important;
+
+        text-align: center;
+    }
+
+
+
+    /* VÍDEO */
+
+    .video-professor {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin-top: 10px;
+
+        border-width: 3px;
+
+        border-radius: 12px;
+
+        overflow: hidden;
+    }
+
+
+
+    .video-professor video {
+
+        width: 100%;
+
+        display: block;
+    }
+
+    .faixa6 {
+
+        padding: 30px 20px;
+    }
+
+
+
+    .texto-faixa6 p {
+
+        font-size: 16px !important;
+
+        line-height: 1.8;
+
+        text-align: center;
+    }
+
+    .seta {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 24px;
+    }
+
+    .carrossel {
+
+        max-width: 95%;
+    }
+
+
+    .slide img {
+
+        max-width: 100%;
+    }
+
+
+    .bar {
+
+        width: 10px;
+        height: 10px;
+    }
+
+    .faixa4 {
+
+        padding: 25px 15px;
+    }
+
+
+    .faixa4 h2 {
+
+        font-size: 13px;
+
+        white-space: nowrap;
+
+        line-height: 1;
+    }
+
+    .video-container iframe {
+
+        height: 220px;
+    }
+
+    .topo {
+        height: 180px;
+    }
+
+    .logo-area img {
+        width: 180px;
+        max-width: 80%;
+    }
+
+}
+
+/* ===================================== */
+/* FAIXA 2 */
+/* ===================================== */
+
+.faixa2 {
+
+    width: 100%;
+
+    background: #f3f3f3;
+
+    padding: 25px 5%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+
+
+/* LADO ESQUERDO */
+
+.faixa2-esquerda {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* IMAGEM COM ARCO */
+
+.imagem-arco {
+
+    width: 650px;
+    height: 720px;
+
+    border: 3px solid #000;
+
+    border-radius: 300px 300px 0 0;
+
+    overflow: hidden;
+
+    background: white;
+
+    position: relative;
+}
+
+
+
+/* IMAGEM */
+
+.imagem-arco img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+}
+
+
+
+/* DIREITA */
+
+.faixa2-direita {
+
+    max-width: 500px;
+
+    text-align: center;
+}
+
+
+
+/* TITULO SUPERIOR */
+
+.faixa2-direita h1 {
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 64px;
+
+    font-style: italic;
+
+    line-height: 1.15;
+
+    font-weight: normal;
+
+    color: #000;
+}
+
+
+
+/* LINHA */
+
+.linha {
+
+    width: 280px;
+    height: 1px;
+
+    background: #555;
+
+    margin: 28px auto;
+}
+
+
+
+/* TITULO MEIO */
+
+.faixa2-direita h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 52px;
+
+    font-style: italic;
+
+    line-height: 1.15;
+
+    font-weight: normal;
+
+    color: #000;
+}
+
+
+
+/* TEXTO */
+
+.faixa2-direita p {
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 32px;
+
+    line-height: 1.5;
+
+    text-align: center;
+
+    color: #111;
+
+    margin-top: 20px;
+
+    max-width: 470px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+
+/* BOTÃO */
+
+.botao-comprar {
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 500px;
+    height: 105px;
+
+    margin-top: 35px;
+
+    background: #A60000;
+
+    border: 4px solid #000;
+
+    border-radius: 50px;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 40px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+
+    animation: pulsar 1s infinite;
+}
+
+
+
+/* HOVER */
+
+.botao-comprar:hover {
+
+    animation: none;
+
+    transform: scale(1.08);
+
+    background: white;
+
+    color: #A60000;
+
+    border-color: #A60000;
+}
+
+
+
+/* ANIMAÇÃO */
+
+@keyframes pulsar {
+
+    0% {
+        transform: scale(1) translateX(0);
+    }
+
+    50% {
+        transform: scale(1.05) translateX(-1.5%);
+    }
+
+    100% {
+        transform: scale(1) translateX(0);
+    }
+}
+
+
+
+/* ===================================== */
+/* RESPONSIVO */
+/* ===================================== */
+
+@media (max-width: 1100px) {
+
+    .faixa2 {
+
+        flex-direction: column;
+    }
+
+    .faixa2-direita p {
+
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .faixa4 h2 {
+
+        font-size: 42px !important;
+
+        white-space: nowrap !important;
+
+        line-height: 1 !important;
+    }
+
+    /* TOPO */
+
+    .topo {
+
+        height: 160px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /* LOGO */
+
+    .logo-area {
+
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .logo-area img {
+
+        width: 220px;
+
+        max-width: 90%;
+
+        margin: 0 auto;
+
+        display: block;
+    }
+
+
+
+    /* FAIXA 2 */
+
+    .faixa2 {
+
+        padding: 25px 20px;
+
+        gap: 25px;
+
+        flex-direction: column;
+    }
+
+
+
+    /* IMAGEM */
+
+    .imagem-arco {
+
+        width: 95%;
+
+        max-width: 420px;
+
+        height: auto;
+    }
+
+
+    .imagem-arco img {
+
+        width: 100%;
+
+        height: auto;
+
+        display: block;
+    }
+
+
+
+    /* TEXTOS */
+
+    .faixa2-direita {
+
+        width: 100%;
+    }
+
+
+    .faixa2-direita h1 {
+
+        font-size: 48px;
+
+        line-height: 1.05;
+    }
+
+
+    .faixa2-direita h2 {
+
+        font-size: 42px;
+
+        line-height: 1.1;
+    }
+
+
+    .faixa2-direita p {
+
+        font-size: 18px;
+
+        text-align: left;
+
+        line-height: 1.5;
+    }
+
+
+
+    /* LINHA */
+
+    .linha {
+
+        width: 180px;
+
+        margin: 20px auto;
+    }
+
+
+
+    /* BOTÃO */
+
+    .botao-comprar {
+
+        width: 100%;
+
+        max-width: 360px;
+
+        height: 80px;
+
+        font-size: 28px;
+
+        margin-top: 25px;
+    }
+
+}
+
+/* ===================================== */
+/* FAIXA 3 */
+/* ===================================== */
+
+.faixa3 {
+
+    width: 100%;
+
+    background-image: url("img/topo-bg.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    padding: 30px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+
+/* CONTAINER DO VÍDEO */
+
+.video-container {
+
+    width: 100%;
+
+    max-width: 515px;
+
+    border: 4px solid #A60000;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* IFRAME */
+
+.video-container iframe {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+    height: auto;
+
+    display: block;
+}
+
+/* ===================================== */
+/* FAIXA 4 */
+/* ===================================== */
+
+.faixa4 {
+
+    width: 100%;
+
+    background: #000;
+
+    padding: 35px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+
+/* TEXTO */
+
+.faixa4 h2 {
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 72px;
+
+    font-style: italic;
+
+    font-weight: normal;
+
+    text-align: center;
+}
+
+/* ===================================== */
+/* FAIXA 5 */
+/* ===================================== */
+
+.faixa5 {
+
+    width: 100%;
+
+    background-image: url("img/topo-bg.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    padding: 30px 20px 60px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+
+/* CARROSSEL */
+
+.carrossel {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+
+/* ESCONDER RADIOS */
+
+.carrossel input {
+
+    display: none;
+}
+
+
+
+/* ÁREA DOS SLIDES */
+
+.slides {
+
+    display: flex;
+
+    width: 800%;
+
+    transition: 0.5s;
+}
+
+
+
+/* CADA SLIDE */
+
+.slide {
+
+    width: 12.5%;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+
+/* IMAGENS */
+
+.slide img {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    display: block;
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+
+    pointer-events: none;
+}
+
+
+
+/* NAVEGAÇÃO */
+
+.navegacao {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 15px;
+
+    gap: 10px;
+}
+
+
+
+/* BOLINHAS */
+
+.bar {
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* PONTO ATIVO */
+
+#slide1:checked~.navegacao label[for="slide1"],
+#slide2:checked~.navegacao label[for="slide2"],
+#slide3:checked~.navegacao label[for="slide3"],
+#slide4:checked~.navegacao label[for="slide4"],
+#slide5:checked~.navegacao label[for="slide5"],
+#slide6:checked~.navegacao label[for="slide6"],
+#slide7:checked~.navegacao label[for="slide7"],
+#slide8:checked~.navegacao label[for="slide8"] {
+
+    background: #A60000;
+
+    transform: scale(1.2);
+}
+
+.bar:hover {
+
+    background: #A60000;
+}
+
+
+
+/* MOVIMENTO */
+
+#slide1:checked~.slides {
+
+    margin-left: 0;
+}
+
+#slide2:checked~.slides {
+
+    margin-left: -100%;
+}
+
+#slide3:checked~.slides {
+
+    margin-left: -200%;
+}
+
+#slide4:checked~.slides {
+
+    margin-left: -300%;
+}
+
+#slide5:checked~.slides {
+
+    margin-left: -400%;
+}
+
+#slide6:checked~.slides {
+
+    margin-left: -500%;
+}
+
+#slide7:checked~.slides {
+
+    margin-left: -600%;
+}
+
+#slide8:checked~.slides {
+
+    margin-left: -700%;
+}
+
+/* ===================================== */
+/* FAIXA 6 */
+/* ===================================== */
+
+.faixa6 {
+
+    width: 100%;
+
+    background: #000;
+
+    padding: 18px 20px;
+}
+
+
+
+/* TEXTO */
+
+.texto-faixa6 {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+
+.texto-faixa6 p {
+
+    color: white;
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 22px;
+
+    line-height: 1.9;
+
+    font-weight: 400;
+}
+
+/* ===================================== */
+/* FAIXA 7 */
+/* ===================================== */
+
+.faixa7 {
+
+    width: 100%;
+
+    background: #efefef;
+
+    padding: 30px 20px 40px;
+}
+
+
+
+
+
+/* TÍTULO */
+
+.titulo-faixa7 {
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-style: italic;
+
+    font-weight: normal;
+
+    margin-bottom: 25px;
+}
+
+
+
+
+
+/* CONTEÚDO */
+
+.conteudo-faixa7 {
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    gap: 80px;
+}
+
+
+
+
+
+/* IMAGEM */
+
+.imagem-professor {
+
+    position: relative;
+
+    width: 500px;
+
+    height: 760px;
+
+    overflow: hidden;
+
+    border: 4px solid black;
+
+    border-radius: 250px 250px 0 0;
+
+    flex-shrink: 0;
+}
+
+
+
+.imagem-professor img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: top;
+
+    display: block;
+}
+
+
+
+
+
+/* TEXTO */
+
+.texto-professor {
+
+    max-width: 600px;
+
+    padding-top: 20px;
+}
+
+
+
+/* TÍTULO TEXTO */
+
+.texto-professor h3 {
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    margin-bottom: 16px;
+}
+
+
+
+/* PARÁGRAFOS */
+
+.texto-professor p {
+
+    font-family: Georgia, serif;
+
+    font-size: 21px !important;
+
+    font-style: italic;
+
+    line-height: 1.55;
+
+    margin-bottom: 17px;
+}
+
+
+
+
+
+/* VÍDEO */
+
+.video-professor {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin-top: 10px;
+
+    border: 4px solid #A60000;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+}
+
+
+
+.video-professor video {
+
+    width: 100%;
+
+    display: block;
+}
+
+/* ===================================== */
+/* FAIXA 8 */
+/* ===================================== */
+
+.faixa8 {
+
+    width: 100%;
+
+    background: #000;
+
+    padding: 40px 20px;
+
+    text-align: center;
+}
+
+
+
+/* TÍTULO */
+
+.titulo-faixa8 {
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-style: italic;
+
+    font-weight: normal;
+
+    color: #FFFFFF;
+
+    margin-bottom: 0px;
+
+    line-height: 1.2;
+}
+
+
+
+/* BOTÃO */
+
+.faixa8-botao {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 360px;
+
+    height: 95px;
+
+    background: #A60000;
+
+    color: #FFFFFF;
+
+    border: 4px solid #FFFFFF;
+
+    border-radius: 14px;
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    animation: pulsar 1s infinite;
+
+    transition: all 0.3s ease;
+}
+
+
+
+/* HOVER */
+
+.faixa8-botao:hover {
+
+    animation-play-state: paused;
+
+    transform: scale(1.08);
+
+    background: #FFFFFF;
+
+    color: #A60000;
+
+    border-color: #A60000;
+}
+
+/* ===================================== */
+/* FAIXA 9 */
+/* ===================================== */
+
+.faixa9 {
+
+    width: 100%;
+
+    background-image: url("img/background-garantia.png");
+
+    background-size: cover;
+
+    background-position: bottom;
+
+    padding: 24px 20px;
+}
+
+
+
+/* CONTAINER DOS CARDS */
+
+.cards-garantia {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: nowrap;
+
+    gap: 240px;
+}
+
+
+
+/* CARD */
+
+.card-garantia {
+
+    width: 320px;
+
+    background: #050505;
+
+    border: 3px solid #C00000;
+
+    border-radius: 18px;
+
+    padding: 22px 24px;
+
+    text-align: center;
+}
+
+
+
+/* ÍCONE */
+
+.card-garantia i {
+
+    font-size: 42px;
+
+    color: #FFFFFF;
+
+    margin-bottom: 16px;
+}
+
+
+
+/* LINHA */
+
+.linha-card {
+
+    width: 100%;
+
+    height: 1px;
+
+    background: #5c5c5c;
+
+    margin-bottom: 16px;
+}
+
+
+
+/* TÍTULO */
+
+.card-garantia h3 {
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #FFFFFF;
+
+    margin-bottom: 10px;
+}
+
+
+
+/* TEXTO */
+
+.card-garantia p {
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    font-style: italic;
+
+    color: #FFFFFF;
+
+    line-height: 1.3;
+}
+
+/* ===================================== */
+/* MOBILE */
+/* ===================================== */
+
+@media (max-width: 768px) {
+
+    .cards-garantia {
+
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .cards-garantia {
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+}
+
+.faixa-dispositivos {
+
+    background: #000;
+
+    padding: 10px 20px 20px;
+
+    text-align: center;
+}
+
+.icone-dispositivos {
+
+    margin-bottom: 0px;
+}
+
+
+
+.icone-dispositivos img {
+
+    width: 180px;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto;
+}
+
+.texto-dispositivos {
+
+    color: white;
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 28px;
+
+    font-weight: 500;
+
+    line-height: 1.15;
+
+    margin: 0;
+}
+
+/* ===================================== */
+/* FAIXA 12 */
+/* ===================================== */
+
+.faixa12 {
+
+    width: 100%;
+
+    background: #000;
+
+    padding: 10px 20px;
+
+    text-align: center;
+}
+
+
+
+/* CONTAINER */
+
+.container-faixa12 {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+
+/* TÍTULO */
+
+.titulo-faixa12 {
+
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    font-style: italic;
+
+    font-weight: normal;
+
+    color: #FFFFFF;
+
+    margin-bottom: 5px;
+}
+
+
+
+/* SUBTÍTULO */
+
+.subtitulo-faixa12 {
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 22px;
+
+    color: #FFFFFF;
+
+    margin-bottom: 10px;
+}
+
+/* TEXTO "POR APENAS" */
+
+.texto-por-apenas {
+
+    font-family: Georgia, serif;
+
+    font-size: 26px;
+
+    font-style: italic;
+
+    color: #FFFFFF;
+
+    margin-bottom: 10px;
+}
+
+
+
+/* PREÇO */
+
+.card-preco-faixa12 {
+
+    width: 100%;
+
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    background: #FFFFFF;
+
+    border: 5px solid #A60000;
+
+    border-radius: 14px;
+
+    padding: 15px 15px;
+
+    text-align: center;
+
+}
+
+/* TEXTOS DENTRO DO CARD */
+
+.card-preco-faixa12 .titulo-faixa12,
+.card-preco-faixa12 .subtitulo-faixa12,
+.card-preco-faixa12 .texto-por-apenas {
+
+    color: #000;
+}
+
+.preco-faixa12 {
+
+    width: 100%;
+
+    max-width: 620px;
+
+    margin: 0 auto 0px;
+
+    background: #FFFFFF;
+
+    border: 5px solid #A60000;
+
+    border-radius: 18px;
+
+    padding: 0px 0px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    gap: 8px;
+}
+
+.cifrao {
+
+    font-size: 42px;
+
+    font-family: "Open Sans", sans-serif;
+
+    font-weight: 700;
+
+    margin-top: 14px;
+
+    color: #000000;
+}
+
+.valor {
+
+    font-size: 120px;
+
+    line-height: 0.9;
+
+    font-family: "Open Sans", sans-serif;
+
+    font-weight: 700;
+
+    color: #000000;
+}
+
+/* BLOCO DO VALOR */
+
+.bloco-valor {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+
+/* MENSAIS */
+
+.mensais {
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 22px;
+
+    color: #555555;
+
+    margin-top: 6px;
+}
+
+
+/* BOTÃO */
+
+.botao-faixa12 {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 420px;
+
+    height: 95px;
+
+    background: #A60000;
+
+    color: #FFFFFF;
+
+    border: 4px solid #FFFFFF;
+
+    border-radius: 14px;
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    animation: pulsar 1s infinite;
+
+    transition: all 0.3s ease;
+
+    margin-top: 10px;
+
+    margin-bottom: 10px;
+}
+
+
+
+/* HOVER */
+
+.botao-faixa12:hover {
+
+    animation-play-state: paused;
+
+    transform: scale(0.98);
+
+    background: #FFFFFF;
+
+    color: #A60000;
+
+    border-color: #A60000;
+}
+
+
+
+/* TEXTO FINAL */
+
+.texto-seguro {
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 18px;
+
+    color: #000000;
+}
+
+/* ===================================== */
+/* FAIXA 13 - FAQ */
+/* ===================================== */
+
+.faixa13 {
+
+    width: 100%;
+
+    background: #e7e4dc;
+
+    padding: 25px 20px;
+}
+
+
+
+/* CONTAINER */
+
+.container-faixa13 {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+
+
+/* TÍTULO */
+
+.titulo-faq {
+
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+
+    font-style: italic;
+
+    font-weight: 700;
+
+    color: #4d4d4d;
+
+    margin-bottom: 10px;
+}
+
+
+
+/* ITEM */
+
+.faq-item {
+
+    border-bottom: 1px solid #9a9a9a;
+
+    padding: 22px 0;
+}
+
+
+
+/* BOTÃO */
+
+.faq-pergunta {
+
+    width: 100%;
+
+    background: transparent;
+
+    border: none;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    text-align: left;
+}
+
+
+
+/* TEXTO DA PERGUNTA */
+
+.faq-pergunta span:first-child {
+
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    font-style: italic;
+
+    color: #5c5c5c;
+}
+
+
+
+/* SETA */
+
+.faq-icone {
+
+    font-size: 26px;
+
+    color: #5c5c5c;
+
+    transition: transform 0.3s ease;
+}
+
+
+
+/* RESPOSTA */
+
+.faq-resposta {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+
+    opacity: 0;
+}
+
+
+
+/* TEXTO RESPOSTA */
+
+.faq-resposta p {
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #5a5a5a;
+
+    margin-top: 16px;
+}
+
+
+
+/* ITEM ABERTO */
+
+.faq-item.active .faq-resposta {
+
+    max-height: 500px;
+
+    opacity: 1;
+}
+
+
+
+/* GIRA SETA */
+
+.faq-item.active .faq-icone {
+
+    transform: rotate(180deg);
+}
+
+/* ===================================== */
+/* FAIXA 14 - COPYRIGHT */
+/* ===================================== */
+
+.faixa14 {
+
+    width: 100%;
+
+    background: #000000;
+
+    padding: 22px 20px;
+
+    text-align: center;
+}
+
+
+
+/* CONTAINER */
+
+.container-faixa14 {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+
+/* TEXTO */
+
+.texto-copy {
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    color: #fffdfd;
+
+    margin: 4px 0;
+}
+
+/* ===================================== */
+/* WHATSAPP FLUTUANTE */
+/* ===================================== */
+
+.whatsapp-flutuante {
+
+    position: fixed;
+
+    right: 22px;
+
+    bottom: 22px;
+
+    width: 68px;
+
+    height: 68px;
+
+    background: #25D366;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #FFFFFF;
+
+    font-size: 38px;
+
+    text-decoration: none;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+
+    z-index: 9999;
+
+    transition: all 0.3s ease;
+
+    animation: pulsarWhatsapp 1.8s infinite;
+
+    .icone-whatsapp {
+
+        width: 38px;
+
+        height: 38px;
+    }
+}
+
+
+
+/* HOVER */
+
+.whatsapp-flutuante:hover {
+
+    transform: scale(1.12);
+
+    background: #1ebe5d;
+}
+
+
+
+/* ANIMAÇÃO */
+
+@keyframes pulsarWhatsapp {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ===================================== */
+/* AVISO DE SERIEDADE */
+/* ===================================== */
+
+.aviso-seriedade {
+
+    width: fit-content;
+
+    max-width: 900px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    margin-top: 0px;
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 32px;
+
+    font-style: italic;
+
+    font-weight: 700;
+
+    color: #000000;
+
+    line-height: 1.8;
+
+    padding: 18px 25px;
+
+    background: rgba(0, 0, 0, 0.04);
+
+    border-left: 5px solid #A60000;
+
+    border-right: 5px solid #A60000;
+
+    animation: destaqueAviso 2.5s ease-in-out infinite;
+}
+
+/* ===================================== */
+/* ANIMAÇÃO AVISO */
+/* ===================================== */
+
+@keyframes destaqueAviso {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
