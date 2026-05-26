@@ -2441,3 +2441,28 @@ body {
         transform: translateY(0);
     }
 }
+
+/* ===================================== */
+/* AJUSTE FINAL BOTÃO MOBILE */
+/* ===================================== */
+
+@media (max-width: 768px) {
+
+    .botao-faixa12 {
+
+        width: 220px !important;
+
+        max-width: calc(100% - 30px) !important;
+
+        margin-left: auto !important;
+
+        margin-right: auto !important;
+
+        display: flex !important;
+
+        justify-content: center !important;
+
+        align-items: center !important;
+    }
+
+}
