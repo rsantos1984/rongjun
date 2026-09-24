@@ -23,6 +23,206 @@
 
     <link rel="stylesheet" href="style.css">
 
+
+<style>
+/* =========================================================
+   CARROSSEL DE VÍDEOS DO YOUTUBE
+   ========================================================= */
+.faixa-youtube {
+    background: #000;
+    color: #fff;
+    padding: 80px 5%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.youtube-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo-youtube {
+    margin: 0 0 12px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.subtitulo-youtube {
+    max-width: 780px;
+    margin: 0 auto 35px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #ddd;
+}
+
+.youtube-carrossel-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.youtube-carrossel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 5px 2px 18px;
+    scrollbar-width: none;
+}
+
+.youtube-carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+.youtube-card {
+    flex: 0 0 calc((100% - 60px) / 4);
+    scroll-snap-align: start;
+    text-decoration: none;
+    color: #fff;
+    text-align: left;
+    display: block;
+}
+
+.youtube-thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #151515;
+    border-radius: 8px;
+}
+
+.youtube-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .35s ease;
+}
+
+.youtube-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(137, 6, 2, .94);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding-left: 3px;
+    opacity: .95;
+    transition: transform .25s ease, background .25s ease;
+}
+
+.youtube-card:hover .youtube-thumb img {
+    transform: scale(1.04);
+}
+
+.youtube-card:hover .youtube-play {
+    transform: translate(-50%, -50%) scale(1.08);
+    background: #890602;
+}
+
+.youtube-titulo {
+    margin: 12px 2px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .95rem;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.youtube-seta {
+    position: absolute;
+    z-index: 2;
+    top: calc(50% - 26px);
+    width: 52px;
+    height: 52px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .82);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.youtube-seta:hover {
+    background: #890602;
+    transform: scale(1.05);
+}
+
+.youtube-seta-esquerda {
+    left: -14px;
+}
+
+.youtube-seta-direita {
+    right: -14px;
+}
+
+.youtube-status {
+    color: #aaa;
+    font-family: 'Open Sans', sans-serif;
+    padding: 25px 10px;
+}
+
+.youtube-fallback {
+    max-width: 900px;
+    margin: 25px auto 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #111;
+}
+
+.youtube-fallback iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: block;
+    border: 0;
+}
+
+@media (max-width: 900px) {
+    .youtube-card {
+        flex-basis: calc((100% - 20px) / 2);
+    }
+
+    .youtube-seta-esquerda {
+        left: 4px;
+    }
+
+    .youtube-seta-direita {
+        right: 4px;
+    }
+}
+
+@media (max-width: 600px) {
+    .faixa-youtube {
+        padding: 60px 5%;
+    }
+
+    .youtube-card {
+        flex-basis: 88%;
+    }
+
+    .youtube-seta {
+        display: none;
+    }
+
+    .youtube-titulo {
+        font-size: .9rem;
+    }
+}
+</style>
+
 </head>
 
 <body>
@@ -294,6 +494,48 @@
             COMEÇAR AGORA
         </a>
 
+    </section>
+
+
+    <!-- ========================================================= -->
+    <!-- FAIXA YOUTUBE - CONTEÚDOS DA PLAYLIST -->
+    <!-- ========================================================= -->
+    <section class="faixa-youtube" id="youtube-conteudos">
+        <div class="youtube-conteudo">
+            <h2 class="titulo-youtube">Continue Conhecendo o Kung Fu</h2>
+
+            <p class="subtitulo-youtube">
+                Assista a outros conteúdos sobre Kung Fu, Wing Chun, treinamento e cultura
+                marcial no nosso canal do YouTube.
+            </p>
+
+            <div class="youtube-carrossel-wrap">
+                <button class="youtube-seta youtube-seta-esquerda" type="button"
+                    aria-label="Vídeos anteriores">&#10094;</button>
+
+                <div class="youtube-carrossel" id="youtubeCarrossel">
+                    <div class="youtube-status" id="youtubeStatus">
+                        Carregando os vídeos...
+                    </div>
+                </div>
+
+                <button class="youtube-seta youtube-seta-direita" type="button"
+                    aria-label="Próximos vídeos">&#10095;</button>
+            </div>
+
+            <!--
+                Fallback: caso a API do YouTube ainda não esteja configurada,
+                o site mostra a playlist diretamente.
+            -->
+            <div class="youtube-fallback" id="youtubeFallback" hidden>
+                <iframe
+                    src="https://www.youtube.com/embed/videoseries?list=PLU3MUXoVRcgA"
+                    title="Vídeos de Kung Fu no YouTube"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
     </section>
 
     <!-- FAIXA 9 -->
@@ -697,6 +939,174 @@
         </svg>
 
     </a>
+
+    <script>
+        /*
+         * =========================================================
+         * CARROSSEL AUTOMÁTICO DO YOUTUBE
+         * =========================================================
+         *
+         * Playlist usada:
+         * PLU3MUXoVRcgA
+         *
+         * Para o carrossel buscar automaticamente os vídeos da
+         * playlist, é necessário informar uma chave da YouTube
+         * Data API v3 abaixo.
+         *
+         * Sem a chave, o site usa automaticamente o player da
+         * playlist como alternativa.
+         */
+        const YOUTUBE_PLAYLIST_ID = "PLU3MUXoVRcgA";
+
+        // COLE A SUA CHAVE DA YOUTUBE DATA API V3 ENTRE AS ASPAS.
+        // Exemplo: const YOUTUBE_API_KEY = "AIza...";
+        const YOUTUBE_API_KEY = "";
+
+        const youtubeCarrossel = document.getElementById("youtubeCarrossel");
+        const youtubeStatus = document.getElementById("youtubeStatus");
+        const youtubeFallback = document.getElementById("youtubeFallback");
+
+        const setaEsquerda = document.querySelector(".youtube-seta-esquerda");
+        const setaDireita = document.querySelector(".youtube-seta-direita");
+
+        let youtubeTimer = null;
+
+        function escaparHTML(texto) {
+            const div = document.createElement("div");
+            div.textContent = texto || "";
+            return div.innerHTML;
+        }
+
+        function criarCardYoutube(video) {
+            const id = video.snippet.resourceId.videoId;
+            const titulo = escaparHTML(video.snippet.title);
+            const thumb =
+                video.snippet.thumbnails?.high?.url ||
+                video.snippet.thumbnails?.medium?.url ||
+                video.snippet.thumbnails?.default?.url;
+
+            const card = document.createElement("a");
+            card.className = "youtube-card";
+            card.href = `https://www.youtube.com/watch?v=${encodeURIComponent(id)}`;
+            card.target = "_blank";
+            card.rel = "noopener noreferrer";
+            card.setAttribute("aria-label", `Assistir: ${video.snippet.title}`);
+
+            card.innerHTML = `
+                <div class="youtube-thumb">
+                    <img src="${thumb}" alt="${titulo}" loading="lazy">
+                    <span class="youtube-play" aria-hidden="true">▶</span>
+                </div>
+                <div class="youtube-titulo">${titulo}</div>
+            `;
+
+            return card;
+        }
+
+        function iniciarMovimentoAutomatico() {
+            if (youtubeTimer) clearInterval(youtubeTimer);
+
+            youtubeTimer = setInterval(() => {
+                const maxScroll =
+                    youtubeCarrossel.scrollWidth - youtubeCarrossel.clientWidth;
+
+                if (maxScroll <= 0) return;
+
+                const primeiroCard =
+                    youtubeCarrossel.querySelector(".youtube-card");
+
+                if (!primeiroCard) return;
+
+                const distancia =
+                    primeiroCard.getBoundingClientRect().width + 20;
+
+                if (youtubeCarrossel.scrollLeft >= maxScroll - 5) {
+                    youtubeCarrossel.scrollTo({
+                        left: 0,
+                        behavior: "smooth"
+                    });
+                } else {
+                    youtubeCarrossel.scrollBy({
+                        left: distancia,
+                        behavior: "smooth"
+                    });
+                }
+            }, 4500);
+        }
+
+        async function carregarVideosYoutube() {
+            if (!YOUTUBE_API_KEY) {
+                youtubeStatus.textContent =
+                    "A playlist está configurada. O carrossel automático será ativado após a configuração da YouTube Data API.";
+                youtubeFallback.hidden = false;
+                return;
+            }
+
+            const url =
+                `https://www.googleapis.com/youtube/v3/playlistItems` +
+                `?part=snippet&maxResults=50` +
+                `&playlistId=${encodeURIComponent(YOUTUBE_PLAYLIST_ID)}` +
+                `&key=${encodeURIComponent(YOUTUBE_API_KEY)}`;
+
+            try {
+                const resposta = await fetch(url);
+
+                if (!resposta.ok) {
+                    throw new Error("Não foi possível consultar a playlist.");
+                }
+
+                const dados = await resposta.json();
+
+                youtubeCarrossel.innerHTML = "";
+
+                const videos = (dados.items || []).filter(item =>
+                    item?.snippet?.resourceId?.videoId
+                );
+
+                if (!videos.length) {
+                    throw new Error("A playlist não retornou vídeos.");
+                }
+
+                videos.forEach(video => {
+                    youtubeCarrossel.appendChild(criarCardYoutube(video));
+                });
+
+                iniciarMovimentoAutomatico();
+            } catch (erro) {
+                console.error("YouTube:", erro);
+
+                youtubeCarrossel.innerHTML = "";
+                youtubeStatus.textContent =
+                    "Não foi possível carregar o carrossel agora.";
+                youtubeFallback.hidden = false;
+            }
+        }
+
+        setaEsquerda.addEventListener("click", () => {
+            youtubeCarrossel.scrollBy({
+                left: -(youtubeCarrossel.clientWidth * 0.85),
+                behavior: "smooth"
+            });
+        });
+
+        setaDireita.addEventListener("click", () => {
+            youtubeCarrossel.scrollBy({
+                left: youtubeCarrossel.clientWidth * 0.85,
+                behavior: "smooth"
+            });
+        });
+
+        youtubeCarrossel.addEventListener("mouseenter", () => {
+            if (youtubeTimer) clearInterval(youtubeTimer);
+        });
+
+        youtubeCarrossel.addEventListener("mouseleave", () => {
+            if (YOUTUBE_API_KEY) iniciarMovimentoAutomatico();
+        });
+
+        carregarVideosYoutube();
+    </script>
+
 </body>
 
 </html>
